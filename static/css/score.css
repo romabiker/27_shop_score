@@ -1,0 +1,40 @@
+body {
+    background-color: #171313;
+}
+
+
+p {
+    font-size: 20px;
+    color: #795548;
+}
+
+.score {
+    font-size: 300px;
+    margin-top: 40px;
+    margin-bottom: -40px;
+}
+
+.score-label {
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 480px) {
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+
+}
+
+@media only screen and (min-width: 992px) {
+
+
+}
+
+@media only screen and (min-width: 1382px) {
+
+
+}
+
