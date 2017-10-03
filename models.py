@@ -5,10 +5,10 @@ from extensions import db
 
 
 class Statuses(enum.Enum):
-    COMPLETED = 'COMPLETED'
-    CANCELED = 'CANCELED'
-    FULFILLMENT = 'FULFILLMENT'
-    DRAFT = 'DRAFT'
+    completed = 'COMPLETED'
+    canceled = 'CANCELED'
+    fulfillment = 'FULFILLMENT'
+    draft = 'DRAFT'
 
 
 class Order(db.Model):
