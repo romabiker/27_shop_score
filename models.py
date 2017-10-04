@@ -1,14 +1,4 @@
-import enum
-
-
 from extensions import db
-
-
-# class Statuses(enum.Enum):
-#     COMPLETED = 'COMPLETED'
-#     CANCELED = 'CANCELED'
-#     FULFILLMENT = 'FULFILLMENT'
-#     DRAFT = 'DRAFT'
 
 
 class Order(db.Model):
@@ -18,7 +8,6 @@ class Order(db.Model):
     contact_name         = db.Column('contact_name', db.String(200))
     contact_phone        = db.Column('contact_phone', db.String(100))
     contact_email        = db.Column('contact_email', db.String(150))
-    # status               = db.Column('status', db.Enum(Statuses))
     created              = db.Column('created', db.DateTime)
     confirmed            = db.Column('confirmed', db.DateTime,  nullable=True)
     comment              = db.Column('comment', db.Text())
