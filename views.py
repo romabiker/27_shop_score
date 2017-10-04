@@ -47,7 +47,7 @@ def score():
     if open_orders_count:
         latest_open_order = open_orders.order_by(Order.created).first()
         if latest_open_order:
-            latest_open_order_timeout = round((
+            latest_open_order_timeout = round(180 - (
                 datetime.now() - latest_open_order.created).total_seconds()/60)
     logging.info('latest_open_order_timeout : {}'.format(latest_open_order_timeout))
     orders_report.update(dict(
