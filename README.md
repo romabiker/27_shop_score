@@ -15,6 +15,7 @@ Outputs additional secondary information:
 - number of open orders
 - number of orders processed for the current day
 
+The site is equally displayed on all devices: smartphones, tablets, notebooks, desktops.
 
 Quickstart
 ----------
