@@ -23,7 +23,7 @@
   <body>
       <div class="container">
         <p class="score-label text-center">Timeout {{ orders_report.latest_open_order_timeout }} minutes</p>
-        <p class="score text-center" style="color: {{ orders_report.get('score_color', 'green') }}"><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>
+        <p class="score text-center"><span class="glyphicon glyphicon-hourglass  {{ orders_report.get('score_color', 'green') }}" aria-hidden="true"></span>
         </p>
         <p class="text-center">Total open  {{ orders_report.get('open_orders_count', 0) }}</p>
         <p class="text-center">Total finished {{ orders_report.get('confirmed_orders_count', 0) }}</p>
