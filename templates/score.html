@@ -22,7 +22,7 @@
 
   <body>
       <div class="container">
-        <p class="score-label text-center">Timeout {{ orders_report.latest_open_order_timeout }} minutes</p>
+        <p class="score-label text-center">Timeout {{ orders_report.latest_open_order_timeout_min }} minutes</p>
         <p class="score text-center"><span class="glyphicon glyphicon-hourglass  {{ orders_report.get('score_color', 'green') }}" aria-hidden="true"></span>
         </p>
         <p class="text-center">Total open  {{ orders_report.get('open_orders_count', 0) }}</p>
