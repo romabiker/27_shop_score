@@ -19,9 +19,9 @@ blueprint = Blueprint('dashboard', __name__,)
 
 
 def get_timeout_color(timeout):
-    if timeout < 7:
+    if timeout <= 7:
         return 'green'
-    if 7 < timeout < 30:
+    if 7 < timeout <= 30:
         return 'yellow'
     if timeout > 30:
         return 'red'
