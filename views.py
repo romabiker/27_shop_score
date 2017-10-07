@@ -11,9 +11,6 @@ from models import Order
 from extensions import db
 
 
-# db_tz = timezone(current_app.config['DB_TIME_ZONE'])
-# datetime.now(timezone(current_app.config['DB_TIME_ZONE']))
-
 if get_debug_flag():
     logging.basicConfig(level=logging.INFO, format='%(message)s')
 
@@ -32,7 +29,6 @@ def get_timeout_color(timeout):
 
 @blueprint.route('/')
 def score():
-    db_tz = timezone(current_app.config['DB_TIME_ZONE'])
     all_today_orders = Order.query.filter(
         db.cast(Order.created, db.Date) == datetime.today().date())
     confirmed_orders_count = 0
@@ -48,7 +44,7 @@ def score():
         latest_open_order = open_orders.order_by(Order.created).first()
         if latest_open_order:
             latest_open_order_timeout_min = round((
-            datetime.now(db_tz) - latest_open_order.created).total_seconds()/60)
+            datetime.now() - latest_open_order.created).total_seconds()/60)
     logging.info('latest_open_order_timeout_min : {}'.format(
                                               latest_open_order_timeout_min))
     return render_template(

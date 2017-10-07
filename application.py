@@ -15,7 +15,6 @@ def create_app():
     )
     app.config['SQLALCHEMY_DATABASE_URI'] =  getenv('SQLALCHEMY_DATABASE_URI')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['DB_TIME_ZONE'] = getenv('DB_TIME_ZONE', 'Europe/Moscow')
     db.init_app(app)
     app.register_blueprint(blueprint)
     return app

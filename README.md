@@ -65,7 +65,7 @@ Run the following commands:
     pipenv shell   # activates virtual environment
 
     heroku local web  # to check server locally
-    git push heroku master # deploy and after that visit dashboard settings on Heroku to provide SQLALCHEMY_DATABASE_URI
+    git push heroku master # deploy and after that visit dashboard settings on Heroku to provide SQLALCHEMY_DATABASE_URI, TZ = Europe/Moscow
     heroku ps:scale web=1 # runs project
     heroku open   # opens in browser
     heroku logs --tail # to see logging
